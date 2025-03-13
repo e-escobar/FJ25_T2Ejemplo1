@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,7 +44,25 @@ namespace FJ25_T2Ejemplo1
             lblSexo.Text = "Sexo: " + personas[index][3];
             lblDireccion.Text = "Dirección: " + personas[index][4];
             lblFNacimiento.Text = "Fecha Nacimiento: " + personas[index][5];
-            pbFoto.Image = (Image)Properties.Resources.ResourceManager.GetObject(personas[index][0]);
+            //pbFoto.Image = (Image)Properties.Resources.ResourceManager.GetObject(personas[index][0]);
+            cargarImagen(personas[index][0]);
+        }
+
+        public void cargarImagen(string index) {
+            string carpeta = Path.Combine(Application.StartupPath, "Fotos");
+            string[] formatos = new string[] { ".jpeg", ".jpg", ".png" };
+            string rutaImagen = null;
+            foreach (string formato in formatos) { 
+                string archivo = Path.Combine(carpeta, index + formato);
+                if (File.Exists(archivo)) {
+                    rutaImagen = archivo;
+                    break;
+                }
+            }
+            if (rutaImagen != null)
+                pbFoto.Image = new Bitmap(rutaImagen);
+            else
+                pbFoto.Image = null;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

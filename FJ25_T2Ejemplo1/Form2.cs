@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -36,6 +37,10 @@ namespace FJ25_T2Ejemplo1
             Form1.lbNombres.Items.Add(nuevaPersona[1]);
 
             guardarFoto(nuevaFoto.FileName);
+
+            //this.Close();  // Cerrar la ventana actual
+
+            //limpiarFormulario();
         }
 
         public static OpenFileDialog nuevaFoto;
@@ -43,7 +48,7 @@ namespace FJ25_T2Ejemplo1
         {
             nuevaFoto = new OpenFileDialog
             {
-                Filter = "Imagenes |*.jpg; *.png"
+                Filter = "Imagenes |*.jpeg; *.jpg; *.png"
             };
 
             if (nuevaFoto.ShowDialog() == DialogResult.OK)
