@@ -40,7 +40,7 @@ namespace FJ25_T2Ejemplo1
 
             //this.Close();  // Cerrar la ventana actual
 
-            //limpiarFormulario();
+            limpiarFormulario();
         }
 
         public static OpenFileDialog nuevaFoto;
@@ -66,6 +66,23 @@ namespace FJ25_T2Ejemplo1
             string destino = Path.Combine(carpeta, nuevaPersona[0] + extension);
 
             File.Copy(archivo, destino, true);
+        }
+
+        private void limpiarFormulario()
+        {
+            tbNombre.Text = "";
+            numEdad.Value = 0;
+            rbHombre.Checked = false;
+            rbMujer.Checked = false;
+            tbDomicilio.Text = "";
+            tpFechaNacimiento.Value = DateTime.Now;
+            pbFotoNueva.Image = null;
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
         }
     }
 }

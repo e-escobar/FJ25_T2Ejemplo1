@@ -67,6 +67,8 @@ namespace FJ25_T2Ejemplo1
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             Form2 form2 = new Form2();
             form2.Show();
         }
