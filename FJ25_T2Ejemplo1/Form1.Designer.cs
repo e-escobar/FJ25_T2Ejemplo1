@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbNombres = new System.Windows.Forms.ListBox();
+            lbNombres = new System.Windows.Forms.ListBox();
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.lblFNacimiento = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -43,14 +43,14 @@
             // 
             // lbNombres
             // 
-            this.lbNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombres.FormattingEnabled = true;
-            this.lbNombres.ItemHeight = 20;
-            this.lbNombres.Location = new System.Drawing.Point(12, 12);
-            this.lbNombres.Name = "lbNombres";
-            this.lbNombres.Size = new System.Drawing.Size(152, 244);
-            this.lbNombres.TabIndex = 0;
-            this.lbNombres.SelectedIndexChanged += new System.EventHandler(this.lbNombres_SelectedIndexChanged);
+            lbNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lbNombres.FormattingEnabled = true;
+            lbNombres.ItemHeight = 20;
+            lbNombres.Location = new System.Drawing.Point(12, 12);
+            lbNombres.Name = "lbNombres";
+            lbNombres.Size = new System.Drawing.Size(152, 244);
+            lbNombres.TabIndex = 0;
+            lbNombres.SelectedIndexChanged += new System.EventHandler(this.lbNombres_SelectedIndexChanged);
             // 
             // gbDatos
             // 
@@ -83,9 +83,9 @@
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.Location = new System.Drawing.Point(161, 142);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(79, 20);
+            this.lblDireccion.Size = new System.Drawing.Size(75, 20);
             this.lblDireccion.TabIndex = 4;
-            this.lblDireccion.Text = "Direcci[on";
+            this.lblDireccion.Text = "Dirección";
             // 
             // lblSexo
             // 
@@ -145,7 +145,7 @@
             this.ClientSize = new System.Drawing.Size(680, 347);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.gbDatos);
-            this.Controls.Add(this.lbNombres);
+            this.Controls.Add(lbNombres);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -157,8 +157,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lbNombres;
         private System.Windows.Forms.GroupBox gbDatos;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox pbFoto;
@@ -167,6 +165,7 @@
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Button btnRegistrar;
+        public static System.Windows.Forms.ListBox lbNombres;
     }
 }
 

@@ -34,7 +34,7 @@
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.tbDomicilio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numEdad = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.rbHombre = new System.Windows.Forms.RadioButton();
             this.rbMujer = new System.Windows.Forms.RadioButton();
@@ -42,17 +42,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoNueva)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEdad)).BeginInit();
             this.SuspendLayout();
             // 
             // pbFotoNueva
             // 
+            this.pbFotoNueva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFotoNueva.Location = new System.Drawing.Point(102, 12);
             this.pbFotoNueva.Name = "pbFotoNueva";
             this.pbFotoNueva.Size = new System.Drawing.Size(100, 100);
             this.pbFotoNueva.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFotoNueva.TabIndex = 0;
             this.pbFotoNueva.TabStop = false;
+            this.pbFotoNueva.Click += new System.EventHandler(this.pbFotoNueva_Click);
             // 
             // btnGuardar
             // 
@@ -63,6 +65,7 @@
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar Datos";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label1
             // 
@@ -100,12 +103,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Edad: ";
             // 
-            // numericUpDown1
+            // numEdad
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(91, 198);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(62, 20);
-            this.numericUpDown1.TabIndex = 6;
+            this.numEdad.Location = new System.Drawing.Point(91, 198);
+            this.numEdad.Name = "numEdad";
+            this.numEdad.Size = new System.Drawing.Size(62, 20);
+            this.numEdad.TabIndex = 6;
             // 
             // label3
             // 
@@ -181,7 +184,7 @@
             this.Controls.Add(this.rbMujer);
             this.Controls.Add(this.rbHombre);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numEdad);
             this.Controls.Add(this.tbDomicilio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbNombre);
@@ -191,7 +194,7 @@
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoNueva)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEdad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,7 +208,7 @@
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.TextBox tbDomicilio;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numEdad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbHombre;
         private System.Windows.Forms.RadioButton rbMujer;
