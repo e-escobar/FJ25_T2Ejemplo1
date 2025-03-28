@@ -16,7 +16,7 @@ namespace FJ25_T2Ejemplo1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MDIParent1());
         }
     }
 }

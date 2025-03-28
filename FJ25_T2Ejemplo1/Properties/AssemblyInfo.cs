@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("FJ25_T2Ejemplo1")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Programación II")]
+[assembly: AssemblyDescription("Proyecto de prueba de formularios")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FJ25_T2Ejemplo1")]
+[assembly: AssemblyCompany("ITSCH | TICS")]
+[assembly: AssemblyProduct("Ejemplo 1 del Tema 2")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Número de compilación
 //      Revisión
 //
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.2.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
